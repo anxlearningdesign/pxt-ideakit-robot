@@ -1,6 +1,6 @@
 {
     "name": "IdeaKitMini:Bot",
-    "version": "0.0.0",
+    "version": "1.0.0",
     "description": "IdeaKitMini:Bot",
     "dependencies": {
         "core": "*",
