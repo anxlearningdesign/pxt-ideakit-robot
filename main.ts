@@ -5,6 +5,8 @@
  */
 
 enum botWalk {
+  //% block="stop"
+  stop,
   //% block="forward"
   forward,
   //% block="backward"
@@ -34,6 +36,8 @@ namespace IdeaKitMiniBot {
   let _servoCurrent = [90, 90, 90, 90];
   let _servoMin = [70, 70, 60, 60];
   let _servoMax = [110, 110, 120, 120];
+
+  let _servoStepStop = [[90, 90, 90, 90]];
 
   let _servoStepForward = [
     [110, 110, 120, 120],
@@ -287,6 +291,9 @@ namespace IdeaKitMiniBot {
   //% block="Movement: %action|Delay: %delay" action.fieldEditor="gridpicker"
   export function bot_walk(action: botWalk, delay: number) {
     switch (action) {
+      case botWalk.stop:
+        _servosDeltaSeq(_servoStepStop, delay);
+        break;
       case botWalk.forward:
         _servosDeltaSeq(_servoStepForward, delay);
         break;
