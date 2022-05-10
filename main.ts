@@ -17,7 +17,7 @@ enum botWalk {
   SlideLeft,
   //% block="slide right"
   SlideRight,
-  //% block="shake right"
+  //% block="shake left"
   ShakeLeft,
   //% block="shake right"
   ShakeRight,
@@ -307,8 +307,10 @@ namespace IdeaKitMiniBot {
         break;
       case botWalk.ShakeLeft:
         _servosDeltaSeq(_servoStepShakeLeft, delay);
+        break;
       case botWalk.ShakeRight:
         _servosDeltaSeq(_servoStepShakeRight, delay);
+        break;
     }
   }
 
