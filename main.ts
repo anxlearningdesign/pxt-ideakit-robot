@@ -34,8 +34,8 @@ namespace IdeaKitMiniBot {
 
   let _servoTrim = [0, 0, 0, 0];
   let _servoCurrent = [90, 90, 90, 90];
-  let _servoMin = [70, 70, 60, 60];
-  let _servoMax = [110, 110, 120, 120];
+  let _servoMin = [80, 80, 60, 60];
+  let _servoMax = [100, 100, 120, 120];
 
   let _servoStepStop = [[90, 90, 90, 90]];
 
