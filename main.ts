@@ -190,21 +190,21 @@ namespace IdeaKitMiniBot {
     ServoBot(Servos.S4, _servoCurrent[3] + _servoTrim[3]);
   }
 
-  //% block="Servos Min|Left leg (S1) defl 75 %s1|Right leg (S2) defl 75 %s2|Left foot (S3) defl 60 %s3|Right foot (S4) defl 60 %s4"
-  export function servoMin(s1: number, s2: number, s3: number, s4: number) {
-      _servoMin[0] = s1
-      _servoMin[1] = s2
-      _servoMin[2] = s3
-      _servoMin[3] = s4
-  }
+  // //% block="Servos Min|Left leg (S1) defl 75 %s1|Right leg (S2) defl 75 %s2|Left foot (S3) defl 60 %s3|Right foot (S4) defl 60 %s4"
+  // export function servoMin(s1: number, s2: number, s3: number, s4: number) {
+  //     _servoMin[0] = s1
+  //     _servoMin[1] = s2
+  //     _servoMin[2] = s3
+  //     _servoMin[3] = s4
+  // }
 
-  //% block="Servos Max|Left leg (S1) defl 105 %s1|Right leg (S2) defl 105 %s2|Left foot (S3) defl 120 %s3|Right foot (S4) defl 120 %s4"
-  export function servoMax(s1: number, s2: number, s3: number, s4: number) {
-      _servoMax[0] = s1
-      _servoMax[1] = s2
-      _servoMax[2] = s3
-      _servoMax[3] = s4
-  }
+  // //% block="Servos Max|Left leg (S1) defl 105 %s1|Right leg (S2) defl 105 %s2|Left foot (S3) defl 120 %s3|Right foot (S4) defl 120 %s4"
+  // export function servoMax(s1: number, s2: number, s3: number, s4: number) {
+  //     _servoMax[0] = s1
+  //     _servoMax[1] = s2
+  //     _servoMax[2] = s3
+  //     _servoMax[3] = s4
+  // }
 
   //% block="Robot forward,backward degree calibration %degree"
   export function degreeCalibration(degree:number) {
