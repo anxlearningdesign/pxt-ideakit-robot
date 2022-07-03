@@ -4,7 +4,7 @@
  * each variable in any order using the $VARIABLE syntax.
  */
 
-enum botWalk {
+ enum botWalk {
   //% block="stop"
   stop,
   //% block="forward"
@@ -40,17 +40,17 @@ namespace IdeaKitMiniBot {
   let _servoStepStop = [[90, 90, 90, 90]];
 
   let _servoStepForward = [
-    [100, 100, 110, 95],
-    [80, 80, 110, 95],
-    [80, 80, 85, 70],
-    [100, 100, 85, 70],
+    [105, 105, 110, 95],
+    [75, 75, 110, 95],
+    [75, 75, 85, 70],
+    [105, 105, 85, 70],
   ];
 
   let _servoStepBackward = [
-    [80, 80, 110, 95],
-    [100, 100, 110, 95],
-    [100, 100, 85, 70],
-    [80, 80, 85, 70],
+    [75, 75, 110, 95],
+    [105, 105, 110, 95],
+    [75, 75, 85, 70],
+    [105, 105, 85, 70],
   ];
 
   let _servoStepLeft = [
@@ -322,5 +322,15 @@ namespace IdeaKitMiniBot {
   //% block="Ultrasonic distance (cm) trig %trig|echo %echo"
   export function sonarDistance(trig: DigitalPin, echo: DigitalPin): number {
     return sonar.ping(trig, echo, PingUnit.Centimeters);
+  }
+
+  //% block="PIR senser pin  %pin"
+  export function PIR(pin: AnalogPin): number {
+    return pins.analogReadPin(pin);
+  }
+
+  //% block="Smoke senser pin  %pin"
+  export function smoke(pin: DigitalPin): number {
+    return pins.digitalReadPin(pin) === 1 ? 0 : 1;
   }
 }
