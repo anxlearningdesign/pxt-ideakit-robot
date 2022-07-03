@@ -198,13 +198,13 @@ namespace IdeaKitMiniBot {
       _servoMin[3] = s4
   }
 
-  // //% block="Servos Max|Left leg (S1) defl 105 %s1|Right leg (S2) defl 105 %s2|Left foot (S3) defl 120 %s3|Right foot (S4) defl 120 %s4"
-  // export function servoMax(s1: number, s2: number, s3: number, s4: number) {
-  //     _servoMax[0] = s1
-  //     _servoMax[1] = s2
-  //     _servoMax[2] = s3
-  //     _servoMax[3] = s4
-  // }
+  //% block="Servos Max Left leg (S1) %s1 Right leg (S2) %s2 Left foot (S3) %s3 Right foot (S4) %s4" s1.defl=Object.values(_servoMax)[0] s2.defl=75 s3.defl=60 s4.defl=60
+  export function servoMax(s1: number, s2: number, s3: number, s4: number) {
+      _servoMax[0] = s1
+      _servoMax[1] = s2
+      _servoMax[2] = s3
+      _servoMax[3] = s4
+  }
 
   //% block="Robot forward,backward degree calibration %degree"
   export function degreeCalibration(degree: number) {
