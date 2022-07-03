@@ -25,8 +25,8 @@
   ShakeRight,
 }
 
-//% color="#af1015" weight=200 block="IdeaKitMini:Bot"
-namespace IdeaKitMiniBot {
+//% color="#af1015" weight=200 block="Idea Kits Robot"
+namespace IdeaKitsRobot {
   const PCA9685_ADDRESS = 0x40;
   const MODE1 = 0x00;
   const PRESCALE = 0xfe;
