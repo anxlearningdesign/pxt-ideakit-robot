@@ -40,59 +40,59 @@ namespace IdeaKitMiniBot {
   let _servoStepStop = [[90, 90, 90, 90]];
 
   let _servoStepForward = [
-    [110, 110, 120, 120],
-    [70, 70, 120, 120],
-    [70, 70, 60, 60],
-    [110, 110, 60, 60],
+    [100, 100, 110, 95],
+    [80, 80, 110, 95],
+    [80, 80, 85, 70],
+    [100, 100, 85, 70],
   ];
 
   let _servoStepBackward = [
-    [70, 70, 120, 120],
-    [110, 110, 120, 120],
-    [110, 110, 60, 60],
-    [70, 70, 60, 60],
+    [80, 80, 110, 95],
+    [100, 100, 110, 95],
+    [100, 100, 85, 70],
+    [80, 80, 85, 70],
   ];
 
   let _servoStepLeft = [
-    [95, 85, 120, 120],
-    [85, 95, 120, 120],
-    [85, 95, 60, 60],
-    [95, 85, 60, 60],
+    [93, 87, 115, 100],
+    [87, 93, 115, 100],
+    [87, 93, 80, 65],
+    [93, 87, 80, 65],
   ];
 
   let _servoStepRight = [
-    [85, 95, 120, 120],
-    [95, 85, 120, 120],
-    [95, 85, 60, 60],
-    [85, 95, 60, 60],
+    [87, 93, 115, 110],
+    [93, 87, 115, 110],
+    [93, 87, 80, 65],
+    [87, 93, 80, 65],
   ];
 
   let _servoStepSlideLeft = [
-    [90, 90, 90, 60],
-    [90, 90, 130, 60],
-    [90, 90, 130, 90],
+    [90, 90, 90, 70],
+    [90, 90, 120, 70],
+    [90, 90, 120, 90],
     [90, 90, 90, 90],
   ];
 
   let _servoStepSlideRight = [
-    [90, 90, 130, 90],
-    [90, 90, 130, 60],
-    [90, 90, 90, 60],
+    [90, 90, 120, 90],
+    [90, 90, 120, 70],
+    [90, 90, 90, 70],
     [90, 90, 90, 90],
   ];
 
   let _servoStepShakeLeft = [
-    [90, 90, 110, 130],
-    [70, 90, 120, 130],
-    [90, 90, 110, 130],
-    [70, 90, 120, 130],
+    [90, 90, 110, 110],
+    [70, 90, 120, 110],
+    [90, 90, 110, 110],
+    [70, 90, 120, 110],
   ];
 
   let _servoStepShakeRight = [
-    [90, 90, 70, 50],
-    [90, 120, 70, 60],
-    [90, 90, 70, 50],
-    [90, 120, 70, 60],
+    [90, 90, 70, 60],
+    [90, 120, 70, 70],
+    [90, 90, 70, 60],
+    [90, 120, 70, 70],
   ];
 
   export enum Servos {
@@ -190,28 +190,20 @@ namespace IdeaKitMiniBot {
     ServoBot(Servos.S4, _servoCurrent[3] + _servoTrim[3]);
   }
 
-  //% block="Set min servos degree|Left leg (S1) %s1|Right leg (S2) %s2|Left foot (S3) %s3|Right foot (S4) %s4" s1.defl=75 s2.defl=75 s3.defl=60 s4.defl=60
+  //% block="Set min servos degree|Left leg (S1) %s1|Right leg (S2) %s2|Left foot (S3) %s3|Right foot (S4) %s4" s1.defl=80 s2.defl=80 s3.defl=50 s4.defl=50
   export function servoMin(s1: number, s2: number, s3: number, s4: number) {
-      _servoMin[0] = s1
-      _servoMin[1] = s2
-      _servoMin[2] = s3
-      _servoMin[3] = s4
+    _servoMin[0] = s1;
+    _servoMin[1] = s2;
+    _servoMin[2] = s3;
+    _servoMin[3] = s4;
   }
 
-  //% block="Set max servos degree|Left leg (S1) %s1|Right leg (S2) %s2|Left foot (S3) %s3|Right foot (S4) %s4" s1.defl=105 s2.defl=105 s3.defl=120 s4.defl=120
+  //% block="Set max servos degree|Left leg (S1) %s1|Right leg (S2) %s2|Left foot (S3) %s3|Right foot (S4) %s4" s1.defl=100 s2.defl=100 s3.defl=130 s4.defl=130
   export function servoMax(s1: number, s2: number, s3: number, s4: number) {
-      _servoMax[0] = s1
-      _servoMax[1] = s2
-      _servoMax[2] = s3
-      _servoMax[3] = s4
-  }
-
-  //% block="Robot forward,backward degree calibration %degree"
-  export function degreeCalibration(degree: number) {
-    for (let i = 0; i < _servoStepForward.length; i++) {
-      _servoStepForward[i][0] = _servoStepForward[i][0] + degree;
-      _servoStepForward[i][1] = _servoStepForward[i][1] + degree;
-    }
+    _servoMax[0] = s1;
+    _servoMax[1] = s2;
+    _servoMax[2] = s3;
+    _servoMax[3] = s4;
   }
 
   function ServoBot(index: Servos, degree: number): void {
