@@ -190,7 +190,7 @@ namespace IdeaKitMiniBot {
     ServoBot(Servos.S4, _servoCurrent[3] + _servoTrim[3]);
   }
 
-  //% block="Servos Min Left leg (S1) %s1 Right leg (S2) %s2 Left foot (S3) %s3 Right foot (S4) %s4" s1.defl=_servoMin[0] s2.defl=_servoMin[1] s3.defl=_servoMin[2] s4.defl=_servoMin[3]
+  //% block="Servos Min Left leg (S1) %s1 Right leg (S2) %s2 Left foot (S3) %s3 Right foot (S4) %s4" s1.defl=75 s2.defl=75 s3.defl=60 s4.defl=60
   export function servoMin(s1: number, s2: number, s3: number, s4: number) {
       _servoMin[0] = s1
       _servoMin[1] = s2
