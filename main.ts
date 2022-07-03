@@ -178,7 +178,7 @@ namespace IdeaKitMiniBot {
     setPwm(index + 7, 0, value);
   }
 
-  //% block="Servos calibration|Left leg (servo 1) %s1|Right leg (servo 2) %s2|Left foot (servo 3) %s3|Right foot (servo 4) %s4"
+  //% block="Servos calibration|Left leg (S1) %s1|Right leg (S2) %s2|Left foot (S3) %s3|Right foot (S4) %s4"
   export function servoTrim(s1: number, s2: number, s3: number, s4: number) {
     _servoTrim[0] = s1;
     _servoTrim[1] = s2;
@@ -190,7 +190,7 @@ namespace IdeaKitMiniBot {
     ServoBot(Servos.S4, _servoCurrent[3] + _servoTrim[3]);
   }
 
-  //% block="Servos Min S1 %s1 S2 %s2 S3 %s3 S4 %s4" s1.defl=75 s2.defl=75 s3.defl=60 s4.defl=60
+  //% block="Set min servos degree|Left leg (S1) %s1|Right leg (S2) %s2|Left foot (S3) %s3|Right foot (S4) %s4" s1.defl=75 s2.defl=75 s3.defl=60 s4.defl=60
   export function servoMin(s1: number, s2: number, s3: number, s4: number) {
       _servoMin[0] = s1
       _servoMin[1] = s2
@@ -198,7 +198,7 @@ namespace IdeaKitMiniBot {
       _servoMin[3] = s4
   }
 
-  //% block="Servos S1 %s1 S2 %s2 S3 %s3 S4 %s4" s1.defl=Object.105 s2.defl=105 s3.defl=120 s4.defl=120
+  //% block="Set max servos degree|Left leg (S1) %s1|Right leg (S2) %s2|Left foot (S3) %s3|Right foot (S4) %s4" s1.defl=105 s2.defl=105 s3.defl=120 s4.defl=120
   export function servoMax(s1: number, s2: number, s3: number, s4: number) {
       _servoMax[0] = s1
       _servoMax[1] = s2
