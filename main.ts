@@ -190,13 +190,13 @@ namespace IdeaKitMiniBot {
     ServoBot(Servos.S4, _servoCurrent[3] + _servoTrim[3]);
   }
 
-  // //% block="Servos Min|Left leg (S1) defl 75 %s1|Right leg (S2) defl 75 %s2|Left foot (S3) defl 60 %s3|Right foot (S4) defl 60 %s4"
-  // export function servoMin(s1: number, s2: number, s3: number, s4: number) {
-  //     _servoMin[0] = s1
-  //     _servoMin[1] = s2
-  //     _servoMin[2] = s3
-  //     _servoMin[3] = s4
-  // }
+  //% block="Servos Min Left leg (S1) %s1 Right leg (S2) %s2 Left foot (S3) %s3 Right foot (S4) %s4" s1.defl=_servoMin[0] s2.defl=_servoMin[1] s3.defl=_servoMin[2] s4.defl=_servoMin[3]
+  export function servoMin(s1: number, s2: number, s3: number, s4: number) {
+      _servoMin[0] = s1
+      _servoMin[1] = s2
+      _servoMin[2] = s3
+      _servoMin[3] = s4
+  }
 
   // //% block="Servos Max|Left leg (S1) defl 105 %s1|Right leg (S2) defl 105 %s2|Left foot (S3) defl 120 %s3|Right foot (S4) defl 120 %s4"
   // export function servoMax(s1: number, s2: number, s3: number, s4: number) {
@@ -207,11 +207,11 @@ namespace IdeaKitMiniBot {
   // }
 
   //% block="Robot forward,backward degree calibration %degree"
-  export function degreeCalibration(degree:number) {
-      for (let i = 0; i < _servoStepForward.length; i++) {
-          _servoStepForward[i][0] = _servoStepForward[i][0] + degree
-          _servoStepForward[i][1] = _servoStepForward[i][1] + degree
-      }
+  export function degreeCalibration(degree: number) {
+    for (let i = 0; i < _servoStepForward.length; i++) {
+      _servoStepForward[i][0] = _servoStepForward[i][0] + degree;
+      _servoStepForward[i][1] = _servoStepForward[i][1] + degree;
+    }
   }
 
   function ServoBot(index: Servos, degree: number): void {
