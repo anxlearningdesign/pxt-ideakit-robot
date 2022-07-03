@@ -1,7 +1,7 @@
 {
-    "name": "IdeaKitMini:Bot",
+    "name": "IdeaKitsRobot",
     "version": "1.0.16",
-    "description": "IdeaKitMini:Bot",
+    "description": "IdeaKitsRobot",
     "dependencies": {
         "core": "*",
         "radio": "*",
