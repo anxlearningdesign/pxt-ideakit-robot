@@ -1,6 +1,6 @@
 {
     "name": "IdeaKitsRobot",
-    "version": "1.0.18",
+    "version": "1.0.19",
     "description": "IdeaKitsRobot",
     "dependencies": {
         "core": "*",
