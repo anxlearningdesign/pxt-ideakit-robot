@@ -333,4 +333,9 @@ namespace IdeaKitsRobot {
   export function smoke(pin: DigitalPin): number {
     return pins.digitalReadPin(pin) === 1 ? 0 : 1;
   }
+
+  //% block="Sound senser pin  %pin"
+  export function sound(pin: DigitalPin): number {
+    return pins.digitalReadPin(pin) === 1 ? 0 : 1;
+  }
 }
