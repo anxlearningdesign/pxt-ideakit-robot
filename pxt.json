@@ -1,7 +1,7 @@
 {
-    "name": "IdeaKitsRobot",
+    "name": "IDEA KIT: Robot",
     "version": "1.0.20",
-    "description": "IdeaKitsRobot",
+    "description": "",
     "dependencies": {
         "core": "*",
         "radio": "*",
