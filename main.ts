@@ -25,8 +25,8 @@
   ShakeRight,
 }
 
-//% color="#af1015" weight=200 block="Idea Kits:Robot"
-namespace IdeaKitsRobot {
+//% color="#af1015" weight=200 block="IDEA KIT: Robot"
+namespace IdeaKitRobot { 
   const PCA9685_ADDRESS = 0x40;
   const MODE1 = 0x00;
   const PRESCALE = 0xfe;
@@ -336,6 +336,11 @@ namespace IdeaKitsRobot {
 
   //% block="Sound senser pin  %pin"
   export function sound(pin: DigitalPin): number {
-    return pins.digitalReadPin(pin) === 1 ? 0 : 1;
+    return pins.digitalReadPin(pin);
+  }
+
+  //% block="show number  %number"
+  export function showNumber(number: number){
+    basic.showNumber(number,15)
   }
 }
